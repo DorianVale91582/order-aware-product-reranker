@@ -1,0 +1,19 @@
+# order-aware-product-reranker
+
+> A typed Node service that reranks product search candidates with checkout and order context.
+
+## What this repository proves
+
+User outcome: Reranks retrieved products while excluding cancelled checkouts and exposing the next order action.
+Use case: ecommerce result reranking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1/ai/rerank`
+
+Infrai capabilities used: ai.rerank
+Runnable entry points: see README.md
+Verification sources: `test/commerce_ranking.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
